@@ -114,7 +114,7 @@ class AudioParser:
                 filename = (
                     os.path.basename(mood)
                     + "-"
-                    + names[downloaded_count].get_text(strip=True)
+                    + names[downloaded_count % len(names)].get_text(strip=True)
                     + "-"
                     + os.path.basename(audio["data-audio-player-preview-url-value"])
                 )
